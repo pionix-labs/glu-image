@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Glukash\\GluImage": "src/"
+            "Sviatovigt\\GluImage": "src/"
         }
     },
     "config": {
