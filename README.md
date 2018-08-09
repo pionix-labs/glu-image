@@ -1,14 +1,17 @@
 GluImage
 =========
+[![Build Status](https://travis-ci.org/pionix-labs/glu-image.svg?branch=master)](https://travis-ci.org/pionix-labs/glu-image)
 
-`glukash\glu-image` is a **PHP image manipulation** helper library.
+`pionix-labs\glu-image` is a **PHP image manipulation** helper library.
 
-The package includes ServiceProvider and Facade for easy **Laravel 4** integration.
+The package includes ServiceProvider and Facade for easy **Laravel 4+** integration.
 
-##Purpose
+**Note:** This package forked and updated for laravel 5 upgrade because of main package is not maintaining anymore!  
+
+## Purpose
 
 - The package supports two image manipulation methods: resize and crop.
-- Easly resize and crop jpg, png, and gif images.
+- Easily resize and crop jpg, png, and gif images.
 - Supports animated gif using GD Library. (No Imagick, Gmagick is needed).
 
 ## Dependencies
@@ -21,49 +24,25 @@ The package uses:
 
 ## Requirements
 
-- PHP >=5.3
+- PHP >=5.3.3
 - GD Library (>=2.0)
 
 ## Quick Installation
 
-To install through composer, put the following in your `composer.json` file:
-
-```json
-{
-	"repositories": [
-	    {
-	        "type": "git",
-	        "url": "https://github.com/glukash/GifCreator"
-	    }
-	],
-	"require": {
-		"glukash/glu-image": "0.*"
-	}
-}
 ```
-
-Without adding the "repositories" key, composer will pull the original [Sybio/GifCreator](https://github.com/Sybio/GifCreator) and you will not be able to chain methods on animated gif files after first save().
-```json
-{
-	"repositories": [
-	    {
-	        "type": "git",
-	        "url": "https://github.com/glukash/GifCreator"
-	    }
-	]
-}
+composer require pionix-labs/glu-image
 ```
 
 ## Laravel Integration
 
-Add `Intervention\Image` and `Glukash\GluImage` service providers in `app/config/app.php`.
+Add `Intervention\Image` and `PionixLabs\GluImage` service providers in `app/config/app.php`.
 
 ```php
 'providers' => array(
 
 	// ...
 	'Intervention\Image\ImageServiceProvider',
-	'Glukash\GluImage\GluImageServiceProvider',
+	'PionixLabs\GluImage\GluImageServiceProvider',
 ),
 ```
 
@@ -74,7 +53,7 @@ Add `GluImage` alias in `app/config/app.php`.
 
 	// ...
 
-	'GluImage' => 'Glukash\GluImage\Facades\GluImage',
+	'GluImage' => 'PionixLabs\GluImage\Facades\GluImage',
 ),
 ```
 
