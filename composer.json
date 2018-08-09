@@ -9,6 +9,12 @@
             "email": "glukash@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/glukash/GifCreator"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "intervention/image": "2.*",
