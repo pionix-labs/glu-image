@@ -207,11 +207,9 @@ class GluImage
      */
     public function __call($methodName, $arguments)
     {
-
+        $mName = $methodName;
         if ($this->isAnimatedGif) {
             $mName = '_' . $methodName . 'Animated';
-        } else {
-            $mName = '_' . $methodName;
         }
 
         if (method_exists($this, $mName)) {
